@@ -14,18 +14,18 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.skienbrannkonsult.no'),
-  title: 'Brannprosjektering i Skien | Skien Brannkonsult',
+  title: 'Brannprosjektering i Skien | Brannkonsult AS',
   description:
-    'Skien Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: {
     canonical: 'https://www.skienbrannkonsult.no',
   },
   openGraph: {
-    title: 'Brannprosjektering i Skien | Skien Brannkonsult',
+    title: 'Brannprosjektering i Skien | Brannkonsult AS',
     description:
-      'Skien Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark.',
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark.',
     url: 'https://www.skienbrannkonsult.no',
-    siteName: 'Skien Brannkonsult',
+    siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Skien Brannkonsult',
+        alt: 'Brannkonsult AS',
       },
     ],
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Skien Brannkonsult AS',
+  name: 'Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Skien',
   telephone: '+47 000 00 000',
   email: 'post@skienbrannkonsult.no',

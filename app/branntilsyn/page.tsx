@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Branntilsyn og branninspeksjon i Skien | Skien Brannkonsult',
+  title: 'Branntilsyn og branninspeksjon i Skien | Brannkonsult AS',
   description:
     'Branntilsyn og branninspeksjon i Skien. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no/branntilsyn' },

@@ -9,9 +9,9 @@ import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Skien | Skien Brannkonsult',
+  title: 'Brannprosjektering i Skien | Brannkonsult AS',
   description:
-    'Skien Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no' },
 }
 
