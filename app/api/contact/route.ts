@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+const TO_EMAIL = 'post@skienbrannkonsult.no'
+
 const PROSJEKTTYPE_LABELS: Record<string, string> = {
   brannkonsept: 'Brannkonsept',
   brannprosjektering: 'Brannprosjektering',
@@ -17,9 +19,8 @@ function escapeHtml(value: string) {
 
 export async function POST(request: Request) {
   const apiKey = process.env.MAILERSEND_API_KEY
-  const toEmail = process.env.CONTACT_FORM_TO_EMAIL
 
-  if (!apiKey || !toEmail) {
+  if (!apiKey) {
     return NextResponse.json(
       { error: 'E-postutsending er ikke konfigurert.' },
       { status: 500 }
@@ -71,8 +72,8 @@ export async function POST(request: Request) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: { email: toEmail, name: 'Brannkonsult AS nettside' },
-      to: [{ email: toEmail }],
+      from: { email: TO_EMAIL, name: 'Brannkonsult AS nettside' },
+      to: [{ email: TO_EMAIL }],
       reply_to: { email: epost, name: navn },
       subject: `Ny henvendelse fra nettsiden${prosjekttypeLabel ? ` – ${prosjekttypeLabel}` : ''}`,
       text: textLines.join('\n'),
