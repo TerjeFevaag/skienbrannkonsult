@@ -25,8 +25,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 gate-band-bottom ${
-        scrolled ? 'bg-brand-white' : 'bg-brand-dark'
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-brand-white shadow-md' : 'bg-brand-dark'
       }`}
     >
       <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop nav — tick-mark separated links, echoing the canal-progress rail */}
+          {/* Desktop nav — tick-mark separated links */}
           <div className="hidden lg:flex items-center">
             {navLinks.map((link, i) => (
               <div key={link.href} className="flex items-center">

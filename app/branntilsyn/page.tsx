@@ -43,12 +43,12 @@ const faqItems = [
 export default function BranntilsynPage() {
   return (
     <>
-      <section className="bg-brand-dark py-16 lg:py-24 gate-band-bottom">
+      <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero-1 sluse-label flex items-center gap-2 text-brand-orange text-xs mb-4">
+          <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">
             <Link href="/" className="hover:underline">Hjem</Link>
             <span>/</span>
-            <span>Sluse 3 av 4 — Branntilsyn</span>
+            <span>Branntilsyn</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black max-w-2xl">
             Branntilsyn og branninspeksjon i Skien
@@ -182,7 +182,7 @@ export default function BranntilsynPage() {
       </section>
 
       <ScrollReveal variant="fade">
-        <section className="bg-brand-dark py-14 gate-band-bottom">
+        <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
               Kontakt oss for hjelp etter branntilsyn i Skien

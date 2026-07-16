@@ -23,7 +23,7 @@ export default function OmOssPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-brand-dark py-16 lg:py-24 gate-band-bottom">
+      <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">
             <Link href="/" className="hover:underline">Hjem</Link>
@@ -137,12 +137,12 @@ export default function OmOssPage() {
         </div>
       </section>
 
-      {/* Process — framed as passing through five sluser */}
+      {/* Process */}
       <section className="py-16 lg:py-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <p className="sluse-label text-brand-orange text-xs mb-2">Fem sluser til ferdig dokumentasjon</p>
-            <h2 className="text-brand-black text-3xl font-black">Vår prosess</h2>
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">Vår prosess</p>
+            <h2 className="text-brand-black text-3xl font-black">Fra kontakt til ferdig dokumentasjon</h2>
           </ScrollReveal>
           <div className="flex flex-col lg:flex-row gap-0">
             {process.map((p, i) => (
@@ -177,7 +177,7 @@ export default function OmOssPage() {
       <section className="py-16 lg:py-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-brand-dark rounded-[30px] gate-band-bottom p-10 lg:p-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="bg-brand-dark rounded-[30px] p-10 lg:p-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div>
                 <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-3">
                   Ta kontakt med oss

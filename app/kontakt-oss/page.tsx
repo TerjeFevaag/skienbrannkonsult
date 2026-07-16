@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function KontaktOssPage() {
   return (
     <>
-      <section className="bg-brand-dark py-16 lg:py-24 gate-band-bottom">
+      <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">
             <Link href="/" className="hover:underline">Hjem</Link>
