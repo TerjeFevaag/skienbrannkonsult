@@ -46,7 +46,7 @@ export default function OmOssPage() {
             <ScrollReveal className="lg:w-1/2">
               <h2 className="text-brand-black text-3xl font-black mb-6">Vår bakgrunn</h2>
               <p className="text-brand-darkgray leading-relaxed mb-5">
-                Vi er et spesialisert brannprosjekteringsfirma med base i Skien, og vi tar oppdrag over hele landet. Vår virksomhet har sentral godkjenning for brannprosjektering i tiltaksklasse 1 og 2.
+                Vi er et spesialisert brannprosjekteringsfirma representert i Skien, og vi tar oppdrag over hele landet. Vår virksomhet har sentral godkjenning for brannprosjektering i tiltaksklasse 1 og 2.
               </p>
               <p className="text-brand-darkgray leading-relaxed mb-5">
                 Siden oppstart i 2013 har vi vært involvert i over 1200 forskjellige brannprosjekter — fra små garasjer og enkle tilbygg til store leilighetsbygg og næringseiendommer.
@@ -167,7 +167,7 @@ export default function OmOssPage() {
           <ScrollReveal className="max-w-3xl">
             <h2 className="text-brand-black text-3xl font-black mb-5">Dekningsområde</h2>
             <p className="text-brand-darkgray leading-relaxed">
-              Vi har base i Skien og dekker hele Telemark — inkludert Porsgrunn, Bamble, Siljan og Nome — men tar oppdrag over hele landet. Enten prosjektet ditt ligger i sentrum, ved Telemarkskanalen eller lengre ut på Telemark, er vi tilgjengelige for befaring og rådgivning.
+              Vi er representert i Skien og dekker hele Grenland og Telemark — inkludert Porsgrunn, Kragerø, Bamble, Siljan og Nome — samt omkringliggende byer, men tar oppdrag over hele landet. Enten prosjektet ditt ligger i Skien, Porsgrunn, Kragerø eller lengre ut i regionen, er vi tilgjengelige for befaring og rådgivning.
             </p>
           </ScrollReveal>
         </div>
