@@ -114,31 +114,6 @@ body {
   background: color-mix(in srgb, var(--color-brand-orange) 40%, transparent);
 }
 
-/* Staircase offset for service/chamber cards — descends like boats through locks.
-   Collapses to a flat stack below the lg breakpoint so nothing overflows on mobile. */
-.chamber-step {
-  --chamber-x: 0px;
-  --chamber-y: 0px;
-  transform: translate(var(--chamber-x), var(--chamber-y));
-  transition: transform 0.3s ease;
-}
-@media (max-width: 1023px) {
-  .chamber-step {
-    transform: none;
-  }
-}
-
-/* Waterline: dashed vertical accent line running behind staircase chamber cards */
-.waterline {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--color-brand-orange) 55%, transparent) 0,
-    color-mix(in srgb, var(--color-brand-orange) 55%, transparent) 8px,
-    transparent 8px,
-    transparent 16px
-  );
-}
-
 /* Sluse eyebrow label — replaces the shared font-accent/Dancing Script (doesn't fit
    Skien's civil-engineering/canal identity, see critical-rules #10) */
 .sluse-label {

@@ -1,14 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight, Phone, Mail, CalendarCheck, FileText, MessageCircle, Users } from 'lucide-react'
 import ServiceCard from '@/components/ServiceCard'
 import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
 import ScrollReveal from '@/components/ScrollReveal'
-import LockGateDivider from '@/components/LockGateDivider'
-import ChamberCard from '@/components/ChamberCard'
-import CanalProgress from '@/components/CanalProgress'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Skien | Skien Brannkonsult',
@@ -16,14 +14,6 @@ export const metadata: Metadata = {
     'Skien Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no' },
 }
-
-const chambers = [
-  { id: 'hero', label: 'Sluseporten' },
-  { id: 'sluse-1', label: 'Sluse 1 — Tjenester' },
-  { id: 'sluse-2', label: 'Sluse 2 — Om oss' },
-  { id: 'sluse-3', label: 'Sluse 3 — Anmeldelser' },
-  { id: 'sluse-4', label: 'Sluse 4 — Spørsmål' },
-]
 
 const services = [
   {
@@ -61,6 +51,33 @@ const stats = [
   { number: 'TKL 1+2', label: 'Sentralt godkjent' },
   { number: 'Fast pris', label: 'Der det er mulig' },
   { number: 'Hele landet', label: 'Vi tar oppdrag overalt' },
+]
+
+const gettingStarted = [
+  {
+    icon: CalendarCheck,
+    title: 'Bestill befaring',
+    description: 'Trenger prosjektet ditt en fysisk gjennomgang? Vi avtaler en befaring som passer deg.',
+    href: '/kontakt-oss',
+  },
+  {
+    icon: FileText,
+    title: 'Få tilbud',
+    description: 'Send oss byggesakstegninger og prosjektbeskrivelse, så sender vi et uforpliktende fastprisstilbud.',
+    href: '/kontakt-oss',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Snakk med rådgiver',
+    description: 'Usikker på hva du trenger? Ring eller send e-post, så veileder vi deg videre.',
+    href: '/kontakt-oss',
+  },
+  {
+    icon: Users,
+    title: 'Se referanser',
+    description: 'Les hva tidligere kunder — arkitekter, utbyggere og private — sier om samarbeidet med oss.',
+    href: '/om-oss',
+  },
 ]
 
 const reviews = [
@@ -142,10 +159,8 @@ const articles = [
 export default function HomePage() {
   return (
     <>
-      <CanalProgress chambers={chambers} />
-
-      {/* ── HERO — Sluseporten (the gate you enter through) ── */}
-      <section id="hero" className="relative min-h-screen lg:min-h-[92vh] flex items-center">
+      {/* ── HERO ── */}
+      <section className="relative min-h-screen lg:min-h-[92vh] flex items-center">
         <Image
           src="/images/hero.jpg"
           alt="Skien og Telemarkskanalen"
@@ -156,17 +171,16 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black/85 via-brand-black/55 to-brand-black/15" />
         <div className="relative z-10 max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
-          <div className="gate-frame max-w-xl py-8">
-            <p className="hero-1 sluse-label text-brand-orange text-sm mb-4">
-              Sluseporten · Skien og Telemark
+          <div className="max-w-xl">
+            <p className="hero-1 text-brand-orange text-sm font-bold uppercase tracking-wide mb-4">
+              Skien og Telemark
             </p>
             <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl xl:text-6xl font-black leading-tight mb-6">
               Brannprosjektering som følger deg trygt gjennom hele byggeprosessen
             </h1>
             <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-8">
               Vi hjelper deg med brannprosjektering i Skien og Telemark. Sentralt godkjent foretak
-              med over 1200 gjennomførte prosjekter — fast pris og rask levering, sluse for sluse
-              gjennom hele prosessen.
+              med over 1200 gjennomførte prosjekter — fast pris og rask levering.
             </p>
             <div className="hero-4 flex flex-wrap gap-4">
               <Link
@@ -186,42 +200,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SLUSE 1 — TJENESTER (staircase chambers) ── */}
-      <LockGateDivider className="bg-brand-lightgray pt-10" />
-      <section id="sluse-1" className="relative py-16 lg:py-24 bg-brand-lightgray overflow-hidden">
-        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 relative">
+      {/* ── TJENESTER — flat solutions row ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-14 max-w-xl">
-            <p className="sluse-label text-brand-orange text-xs mb-2">Sluse 1 av 4</p>
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">
+              Våre tjenester
+            </p>
             <h2 className="text-brand-black text-3xl lg:text-4xl font-black">
-              Tjenester — hver etappe på veien mot et trygt bygg
+              Brannsikkerhet gjennom hele byggeprosessen
             </h2>
           </ScrollReveal>
-          <div className="relative">
-            <div
-              className="waterline hidden lg:block absolute left-6 top-0 bottom-0 w-[2px]"
-              aria-hidden="true"
-            />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:pl-16">
-              {services.map((service, i) => (
-                <ChamberCard key={service.href} index={i}>
-                  <ScrollReveal delay={i * 80}>
-                    <ServiceCard {...service} />
-                  </ScrollReveal>
-                </ChamberCard>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {services.map((service, i) => (
+              <ScrollReveal key={service.href} delay={i * 80}>
+                <ServiceCard {...service} />
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── SLUSE 2 — OM OSS + TILLIT ── */}
-      <LockGateDivider className="bg-brand-dark pt-10" />
-      <section id="sluse-2" className="py-16 lg:py-24 bg-brand-dark">
+      {/* ── OM OSS + TILLIT ── */}
+      <section className="py-16 lg:py-24 bg-brand-dark">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
-              <p className="sluse-label text-brand-orange text-xs mb-2">Sluse 2 av 4</p>
-              <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-6">Om oss</h2>
+              <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">Om oss</p>
+              <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-6">
+                Lokalkunnskap fra Skien og Telemark
+              </h2>
               <p className="text-brand-white/70 leading-relaxed mb-4">
                 Skien er den historiske innfartsporten til Telemarkskanalen, kjent for sluseanlegget
                 på Vrangfoss som løfter båter trinnvis gjennom fem kamre. Byen har også en lang
@@ -238,13 +246,9 @@ export default function HomePage() {
               </Link>
             </ScrollReveal>
             <ScrollReveal variant="scale">
-              <div className="flex items-end justify-between gap-3 lg:gap-4 border-b-2 border-brand-orange/30">
-                {stats.map((stat, i) => (
-                  <div
-                    key={stat.label}
-                    className="flex-1 text-center pb-4"
-                    style={{ marginBottom: `${i * 16}px` }}
-                  >
+              <div className="grid grid-cols-2 gap-6 border-t border-brand-white/10 pt-8">
+                {stats.map((stat) => (
+                  <div key={stat.label}>
                     <div className="text-brand-orange font-black text-2xl lg:text-3xl mb-2">
                       {stat.number}
                     </div>
@@ -257,46 +261,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SLUSE 3 — ANMELDELSER (boats passing through) ── */}
-      <LockGateDivider className="bg-brand-white pt-10" />
-      <section id="sluse-3" className="py-16 lg:py-24 bg-brand-white">
+      {/* ── KOM I GANG — 4 engagement cards ── */}
+      <section className="py-16 lg:py-24 bg-brand-white">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-14 max-w-xl">
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">
+              Kom i gang
+            </p>
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">
+              Slik kommer du i gang med oss
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {gettingStarted.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <ScrollReveal key={item.title} delay={i * 80}>
+                  <Link
+                    href={item.href}
+                    className="group block h-full bg-brand-lightgray rounded-[30px] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="w-14 h-14 rounded-[10px] bg-brand-orange/10 flex items-center justify-center mb-6 group-hover:bg-brand-orange transition-colors duration-300">
+                      <Icon size={24} className="text-brand-orange group-hover:text-brand-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="font-bold text-brand-black text-lg mb-2">{item.title}</h3>
+                    <p className="text-brand-darkgray text-sm leading-relaxed">{item.description}</p>
+                  </Link>
+                </ScrollReveal>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ANMELDELSER ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12 max-w-xl">
-            <p className="sluse-label text-brand-orange text-xs mb-2">Sluse 3 av 4</p>
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">
+              Anmeldelser
+            </p>
             <h2 className="text-brand-black text-3xl lg:text-4xl font-black">
-              Kundene passerer gjennom med gode ord
+              Hva kundene våre sier
             </h2>
           </ScrollReveal>
-        </div>
-        <ScrollReveal variant="fade">
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 px-4 sm:px-6 lg:px-8 max-w-[1350px] mx-auto">
-            {reviews.map((r) => (
-              <div key={r.author} className="snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[30%]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {reviews.map((r, i) => (
+              <ScrollReveal key={r.author} delay={i * 80}>
                 <ReviewCard {...r} />
-              </div>
+              </ScrollReveal>
             ))}
           </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── SLUSE 4 — SPØRSMÅL, ARTIKLER, SLUSEPORTEN ÅPNER ── */}
-      <LockGateDivider className="bg-brand-lightgray pt-10" />
-      <section id="sluse-4" className="py-16 lg:py-24 bg-brand-lightgray">
-        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="mb-10 max-w-xl">
-            <p className="sluse-label text-brand-orange text-xs mb-2">Sluse 4 av 4</p>
-            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">
-              Vanlige spørsmål
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={80} variant="fade">
-            <div className="bg-brand-white border border-brand-gray rounded-[30px] p-8">
-              <FAQAccordion items={faqItems} />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
+      {/* ── ARTIKLER ── */}
       <section className="py-16 lg:py-24 bg-brand-white">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="flex items-end justify-between mb-10">
@@ -346,17 +365,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA — Sluseporten åpner for deg ── */}
+      {/* ── SPØRSMÅL ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="mb-10 max-w-xl">
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">
+              Spørsmål
+            </p>
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">Vanlige spørsmål</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={80} variant="fade">
+            <div className="bg-brand-white border border-brand-gray rounded-[30px] p-8">
+              <FAQAccordion items={faqItems} />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── CTA — snakk med en rådgiver ── */}
       <section className="bg-brand-dark py-16 lg:py-20">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal variant="fade">
-            <p className="sluse-label text-brand-orange text-xs mb-4">Sluseporten åpner for deg</p>
+            <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-4">
+              Snakk med en rådgiver
+            </p>
             <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-4">
               Klar for å komme i gang?
             </h2>
             <p className="text-brand-white/70 text-lg mb-8 max-w-xl mx-auto">
-              Ta kontakt i dag for et uforpliktende tilbud på brannprosjektering i Skien. Vi svarer
-              innen 24 timer.
+              Over 1200 gjennomførte prosjekter og sentral godkjenning i tiltaksklasse 1 og 2. Ta
+              kontakt i dag for et uforpliktende tilbud på brannprosjektering i Skien.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -373,6 +411,39 @@ export default function HomePage() {
               </a>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── KONTAKTSKJEMA — embedded lead form ── */}
+      <section className="py-16 lg:py-24 bg-brand-white">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <ScrollReveal>
+              <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">
+                Kontakt oss
+              </p>
+              <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-4">
+                Få et uforpliktende tilbud
+              </h2>
+              <p className="text-brand-darkgray leading-relaxed mb-8">
+                Fyll ut skjemaet, så tar vi kontakt innen 24 timer med et fastprisstilbud tilpasset
+                prosjektet ditt.
+              </p>
+              <div className="space-y-3 text-sm">
+                <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors">
+                  <Phone size={16} /> +47 000 00 000
+                </a>
+                <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors">
+                  <Mail size={16} /> post@skienbrannkonsult.no
+                </a>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal variant="scale">
+              <div className="bg-brand-lightgray rounded-[30px] p-8">
+                <ContactForm />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
     </>

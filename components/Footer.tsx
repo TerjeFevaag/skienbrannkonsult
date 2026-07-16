@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, MapPin } from 'lucide-react'
 
 function FacebookIcon() {
   return (
@@ -28,36 +28,32 @@ function LinkedinIcon() {
   )
 }
 
-const columns = [
-  {
-    heading: 'Snarveier',
-    links: [
-      { href: '/', label: 'Hjem' },
-      { href: '/om-oss', label: 'Om oss' },
-      { href: '/artikler/pipebrann', label: 'Artikler' },
-      { href: '/kontakt-oss', label: 'Kontakt oss' },
-    ],
-  },
-  {
-    heading: 'Tjenester',
-    links: [
-      { href: '/brannkonsept', label: 'Brannkonsept' },
-      { href: '/brannprosjektering', label: 'Brannprosjektering' },
-      { href: '/branntilsyn', label: 'Branntilsyn' },
-      { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
-    ],
-  },
+const serviceLinks = [
+  { href: '/brannkonsept', label: 'Brannkonsept' },
+  { href: '/brannprosjektering', label: 'Brannprosjektering' },
+  { href: '/branntilsyn', label: 'Branntilsyn' },
+  { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
+]
+
+const quickLinks = [
+  { href: '/', label: 'Hjem' },
+  { href: '/om-oss', label: 'Om oss' },
+  { href: '/kontakt-oss', label: 'Kontakt oss' },
+]
+
+const articleLinks = [
+  { href: '/artikler/pipebrann', label: 'Forebygg pipebrann' },
+  { href: '/artikler/brannslokker', label: 'Riktig brannslokker' },
+  { href: '/artikler/roykvarsler', label: 'Riktig røykvarsler' },
 ]
 
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-brand-white">
-      {/* "Kanalkart" — the three blocks descend at staggered heights, echoing the
-          chamber-card staircase used throughout the site */}
       <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
-          {/* Col 1: Logo + tagline + socials */}
-          <div className="md:pt-0">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6">
+          {/* Col 1: Logo + tagline + contact info + socials */}
+          <div>
             <div className="mb-5">
               <Image src="/images/logo-white.png" alt="Skien Brannkonsult" width={234} height={72} className="object-contain" />
             </div>
@@ -65,6 +61,17 @@ export default function Footer() {
               Sentralt godkjent foretak for brannprosjektering i tiltaksklasse 1 og 2. Vi hjelper
               deg med brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark.
             </p>
+            <div className="space-y-2.5 text-sm mb-6">
+              <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">
+                <Phone size={13} /> +47 000 00 000
+              </a>
+              <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">
+                <Mail size={13} /> post@skienbrannkonsult.no
+              </a>
+              <div className="flex items-center gap-2 text-brand-white/60">
+                <MapPin size={13} /> Skien, Telemark
+              </div>
+            </div>
             <div className="flex gap-4">
               <a href="#" aria-label="Facebook" className="text-brand-white/50 hover:text-brand-orange transition-colors">
                 <FacebookIcon />
@@ -78,18 +85,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Snarveier — staggered down + divided by a thin gate-line rather than a plain gap */}
-          <div className="md:pt-8 md:border-l md:border-brand-white/10 md:pl-6">
-            <h3 className="sluse-label text-brand-orange mb-5 text-xs">
-              {columns[0].heading}
+          {/* Col 2: Tjenester */}
+          <div>
+            <h3 className="font-bold uppercase tracking-wide text-brand-orange mb-5 text-xs">
+              Tjenester
             </h3>
             <ul className="space-y-3">
-              {columns[0].links.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -97,38 +101,42 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Tjenester — steps down one chamber further than col 2 */}
-          <div className="md:pt-16 md:border-l md:border-brand-white/10 md:pl-6">
-            <h3 className="sluse-label text-brand-orange mb-5 text-xs">
-              {columns[1].heading}
+          {/* Col 3: Artikler */}
+          <div>
+            <h3 className="font-bold uppercase tracking-wide text-brand-orange mb-5 text-xs">
+              Artikler
             </h3>
             <ul className="space-y-3">
-              {columns[1].links.map((link) => (
+              {articleLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
 
-            <div className="mt-6 space-y-2 text-sm text-brand-white/60">
-              <a href="tel:+4700000000" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
-                <Phone size={13} /> +47 000 00 000
-              </a>
-              <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
-                <Mail size={13} /> post@skienbrannkonsult.no
-              </a>
-            </div>
+          {/* Col 4: Snarveier */}
+          <div>
+            <h3 className="font-bold uppercase tracking-wide text-brand-orange mb-5 text-xs">
+              Snarveier
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
-      {/* Final gate band */}
-      <div className="gate-band-top">
+      {/* Bottom bar */}
+      <div className="border-t border-brand-white/10">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-brand-white/40 text-sm">
             © {new Date().getFullYear()} Skien Brannkonsult AS. Alle rettigheter forbeholdt.
