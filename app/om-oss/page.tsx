@@ -52,7 +52,7 @@ export default function OmOssPage() {
                 Siden oppstart i 2013 har vi vært involvert i over 1200 forskjellige brannprosjekter — fra små garasjer og enkle tilbygg til store leilighetsbygg og næringseiendommer.
               </p>
               <p className="text-brand-darkgray leading-relaxed mb-8">
-                Skien er den historiske innfartsporten til Telemarkskanalen, kjent for sluseanlegget på Vrangfoss som løfter båter trinnvis gjennom fem kamre. Byen har også en lang industrihistorie gjennom Union og Norsk Hydro, som ble grunnlagt her i 1905. Bygningsmassen spenner fra eldre trehusbebyggelse i sentrum til moderne industri- og boligbygg i vekst. Vi leverer brannkonsept og brannprosjektering til private, arkitekter, industribedrifter og utbyggere i hele Skien og på Telemark.
+                Regionen har en variert bygningsmasse — fra eldre trehusbebyggelse i sentrumsnære strøk til industrianlegg og moderne bolig- og næringsbygg i vekst. Vi leverer brannkonsept og brannprosjektering til private, arkitekter, industribedrifter og utbyggere i Skien, Porsgrunn og resten av Grenland og Telemark.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
