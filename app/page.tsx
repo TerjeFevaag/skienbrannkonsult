@@ -11,7 +11,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Skien | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no' },
 }
 
@@ -32,10 +32,10 @@ const services = [
   },
   {
     iconImage: '/images/icon-branntilsyn.png',
-    title: 'Branntilsyn',
+    title: 'Branninspeksjon',
     description:
       'Har du fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet? Vi inspiserer hele bygningen og utarbeider tilstandsrapport.',
-    href: '/branntilsyn',
+    href: '/branninspeksjon',
   },
   {
     iconImage: '/images/icon-uavhengig-kontroll.png',

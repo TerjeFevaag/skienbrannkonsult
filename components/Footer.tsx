@@ -31,7 +31,7 @@ function LinkedinIcon() {
 const serviceLinks = [
   { href: '/brannkonsept', label: 'Brannkonsept' },
   { href: '/brannprosjektering', label: 'Brannprosjektering' },
-  { href: '/branntilsyn', label: 'Branntilsyn' },
+  { href: '/branninspeksjon', label: 'Branninspeksjon' },
   { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
 ]
 
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
             <p className="text-brand-white/60 text-sm leading-relaxed mb-6">
               Sentralt godkjent foretak for brannprosjektering i tiltaksklasse 1 og 2. Vi hjelper
-              deg med brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark.
+              deg med brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark.
             </p>
             <div className="space-y-2.5 text-sm mb-6">
               <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">

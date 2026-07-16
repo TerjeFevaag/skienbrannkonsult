@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.skienbrannkonsult.no'),
   title: 'Brannprosjektering i Skien | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: {
     canonical: 'https://www.skienbrannkonsult.no',
   },
   openGraph: {
     title: 'Brannprosjektering i Skien | Brannkonsult AS',
     description:
-      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Skien og på Telemark.',
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark.',
     url: 'https://www.skienbrannkonsult.no',
     siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
