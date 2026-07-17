@@ -20,19 +20,19 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'Hva trenger jeg til mitt prosjekt — brannkonsept eller brannteknisk notat?',
+    question: 'Jeg skal bygge garasje/tilbygg i Skien — trenger jeg virkelig et fullt brannkonsept?',
     answer:
-      'Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering.',
+      'Kommer an på tiltaket. For små, enkle tiltak holder det ofte med et brannteknisk notat, som er raskere og rimeligere å få utarbeidet. Krever kommunen en mer helhetlig vurdering av hele byggverket, må det et fullt brannkonsept til. Send oss en kort beskrivelse av prosjektet, så sier vi rett ut hva dere faktisk trenger — vi tjener ikke på å selge dere mer enn nødvendig.',
   },
   {
-    question: 'Er befaring nødvendig for brannkonsept?',
+    question: 'Må dere komme på befaring før dere kan lage brannkonseptet?',
     answer:
-      'For nybygg og enklere saker er det sjelden nødvendig med befaring. Takket være digitale kartdata og gode tegningsunderlag kan vi i mange tilfeller utarbeide brannkonseptet uten fysisk befaring. Vi gir beskjed dersom vi ser behov for det.',
+      'Sjelden, faktisk. For nybygg og de fleste tilbygg holder gode tegninger og digitale kartdata til å gjøre jobben uten fysisk befaring — noe som også holder kostnaden nede. Er tiltaket komplekst nok til at vi bør se bygget med egne øyne, sier vi fra før vi starter, ikke etter.',
   },
   {
-    question: 'Hva koster et brannkonsept i Skien?',
+    question: 'Hva må jeg sende dere for å få et pristilbud?',
     answer:
-      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris slik at du slipper ubehagelige overraskelser. Send oss informasjon om prosjektet for et nøyaktig tilbud.',
+      'Adresse eller matrikkelnummer, antall etasjer og bruksareal, situasjonsplan og plantegninger, samt en kort beskrivelse av hva som skal bygges. Jo mer komplett underlag, jo mer presist blir tilbudet — og dere slipper å vente på oppfølgingsspørsmål.',
   },
   {
     question: 'Utarbeider dere brannkonsept i Porsgrunn og Kragerø også?',
@@ -40,19 +40,14 @@ const faqItems = [
       'Ja. Vi tar oppdrag i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome — samt resten av landet ved behov. De fleste brannkonsept kan utarbeides uten fysisk befaring, uansett hvor bygget ligger.',
   },
   {
-    question: 'Tilbyr dere håndverkertjenester?',
+    question: 'Selger dere noe i tillegg til rapporten, som brannvarslere eller sprinkleranlegg?',
     answer:
-      'Nei — vi er en nøytral rådgiver og selger ingen produkter eller håndverkertjenester. Dette sikrer at rådgivningen vår alltid er uavhengig og i ditt beste interesse.',
+      'Nei, og det er bevisst. Vi er utelukkende en rådgivende part og har ingen produkter eller håndverkertjenester å selge deg. Anbefalingene i brannkonseptet er derfor kun styrt av hva regelverket faktisk krever for ditt bygg.',
   },
   {
-    question: 'Hva trengs for å få et pristilbud?',
+    question: 'Hvor raskt kan jeg få ferdig brannkonsept?',
     answer:
-      'For å gi et nøyaktig tilbud trenger vi: adresse/matrikkel, antall etasjer og bruksareal, tegninger (situasjonsplan og plantegninger) og en kort prosjektbeskrivelse. Send dette til oss så sender vi tilbud innen 24 timer.',
-  },
-  {
-    question: 'Hvor lang tid tar det å utarbeide et brannkonsept?',
-    answer:
-      'Leveringstid avhenger av prosjektets omfang og vår arbeidsbelastning. For de fleste prosjekter leverer vi innen 5–10 virkedager etter mottatt bestilling og komplett underlag. Har du tidsfrist, oppgi dette i forespørselen.',
+      'Normalt 5–10 virkedager fra vi har mottatt komplett underlag, avhengig av prosjektets omfang og pågang hos oss. Har dere en søknadsfrist hos kommunen, si ifra i forespørselen, så prioriterer vi deretter.',
   },
 ]
 
@@ -99,7 +94,7 @@ export default function BrannkonseptPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Et brannkonsept er en skriftlig rapport som oppsummerer bygningens brannsikkerhetsnivå. Ved byggesaker krever kommunen som regel prosjekteringsdokumentasjon på brannkonseptnivå — en helhetlig overordnet plan som ivaretar brannsikkerheten både for det omsøkte tiltaket og den øvrige bygningsmassen. Vi hjelper private, arkitekter, industribedrifter og utbyggere i Skien, Porsgrunn, Kragerø og resten av Telemark med å utarbeide komplette brannkonsept til fast pris.
+                  Skal du bygge nytt, bygge på eller endre bruken av et bygg i Grenland, er et brannkonsept som regel første steg kommunen ber om. Det er en skriftlig, overordnet plan som viser hvordan hele byggverket — ikke bare det du søker om nå — ivaretar brannsikkerheten. Vi lager komplette brannkonsept for private, arkitekter, industribedrifter og utbyggere i Skien, Porsgrunn, Kragerø og resten av Telemark, alltid til fast pris avtalt på forhånd.
                 </p>
               </ScrollReveal>
 
@@ -116,19 +111,19 @@ export default function BrannkonseptPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Hva inneholder et brannkonsept?</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Dette får dere levert</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-6">
-                  Et komplett brannkonsept fra Brannkonsult AS inneholder:
+                  Et brannkonsept fra oss er ikke bare et skjema fylt ut — det er en fullstendig dokumentasjonspakke kommunen kan saksbehandle direkte:
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    'Fastsettelse av risikoklasse (RKL) for alle bygningsdeler',
-                    'Fastsettelse av brannklasse (BKL)',
-                    'Oppdeling i brannceller og brannseksjoner',
-                    'Beskrivelse av rømningsveier og røykventilasjon',
-                    'Branntekniske tegninger (plantegninger med brannceller, rømning m.m.)',
-                    'Vurdering av bærende og skille konstruksjoner',
-                    'Krav til branntekniske installasjoner',
+                    'Risikoklasse (RKL) fastsatt for hver del av bygget',
+                    'Brannklasse (BKL) for byggverket som helhet',
+                    'Inndeling i brannceller og eventuelle brannseksjoner',
+                    'Dokumenterte rømningsveier og løsning for røykventilasjon',
+                    'Branntekniske plantegninger som viser celler, rømning og seksjonering',
+                    'Vurdering av hvordan bærende og skillende konstruksjoner må utføres',
+                    'Konkrete krav til branntekniske installasjoner i bygget',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
@@ -139,12 +134,12 @@ export default function BrannkonseptPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Brannklasser og risikoklasser</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Hvorfor risikoklasse og brannklasse betyr noe for prisen</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-4">
-                  Alle bygninger i Norge klassifiseres etter risikoklasse (RKL 1–6) og brannklasse (BKL 1–4). Risikoklassen bestemmes av hva bygget brukes til og hvilke konsekvenser en brann kan ha. Brannklassen fastsettes ut fra risikoklasse og antall etasjer.
+                  Alt som bygges i Norge plasseres i en risikoklasse (RKL 1–6) ut fra hva bygget skal brukes til, og en brannklasse (BKL 1–4) ut fra risikoklassen og antall etasjer. Disse to tallene avgjør hvor omfattende brannkonseptet må være — en enebolig i RKL 2 krever langt mindre dokumentasjon enn et næringsbygg i RKL 4, og det er derfor prisen varierer fra prosjekt til prosjekt.
                 </p>
                 <div className="rounded-[20px] bg-brand-lightgray p-6 mb-8">
-                  <h3 className="font-bold text-brand-black mb-3">Eksempler på risikoklasser:</h3>
+                  <h3 className="font-bold text-brand-black mb-3">Noen vanlige eksempler:</h3>
                   <ul className="space-y-2 text-brand-darkgray text-sm">
                     <li><strong>RKL 1:</strong> Garasjer, lager (ingen personopphold)</li>
                     <li><strong>RKL 2:</strong> Boliger med evakueringsmulighet fra egen enhet</li>
@@ -156,14 +151,14 @@ export default function BrannkonseptPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Hva vi tilbyr</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Slik jobber vi med dere</h2>
                 <ul className="space-y-3 mb-8">
                   {[
-                    'Utarbeidelse av komplett brannkonsept',
-                    'Branntekniske tegninger (brannceller, rømningsveier)',
-                    'Ansvarsrett overfor kommunen i tiltaksklasse 1 og 2',
-                    'Fastpris — ingen skjulte kostnader',
-                    'Levering innen 5–10 virkedager',
+                    'Utarbeider et komplett, søknadsklart brannkonsept',
+                    'Leverer branntekniske tegninger dere kan bruke direkte i byggesøknaden',
+                    'Erklærer ansvarsrett overfor kommunen i tiltaksklasse 1 og 2',
+                    'Gir dere fastpris skriftlig før arbeidet starter',
+                    'Leverer normalt innen 5–10 virkedager',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
@@ -246,7 +241,7 @@ export default function BrannkonseptPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Kontakt oss for uforpliktende tilbud på brannkonsept i Skien, Porsgrunn eller Telemark
+              Send oss tegningene, så har dere svar innen 24 timer
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Få tilbud nå

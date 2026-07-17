@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'Hva koster brannprosjektering i Skien?',
+    question: 'Jeg skal bygge om garasjen til utleiedel i Skien — trenger jeg brannprosjektering?',
     answer:
-      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris. Send oss tegninger og prosjektbeskrivelse for et nøyaktig tilbud.',
+      'Ja, i de aller fleste tilfeller. Å etablere en ny selvstendig boenhet — enten det er en utleiedel, en hybel eller en sekundærleilighet — utløser krav om brannprosjektering, fordi enheten skal kunne evakueres uavhengig av resten av bygget. Det samme gjelder tilbygg, påbygg og de fleste andre søknadspliktige tiltak. Usikker på ditt tilfelle? Beskriv prosjektet kort, så avklarer vi det gratis.',
   },
   {
     question: 'Tar dere oppdrag i Porsgrunn og Kragerø også?',
@@ -30,24 +30,24 @@ const faqItems = [
       'Ja, vi utfører brannprosjektering i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome. Befaring er sjelden nødvendig, så avstand er normalt ikke noe hinder for prosjektet ditt.',
   },
   {
-    question: 'Trenger jeg brannprosjektering for tilbygg eller bruksendring?',
+    question: 'Hva koster det, og hva ligger i prisen?',
     answer:
-      'Ja, de fleste tiltak som krever søknad til kommunen utløser også krav om brannprosjektering — dette gjelder tilbygg, påbygg, bruksendring, ny boenhet i eksisterende bygg og bytte av vinduer i brannvegg. Ta kontakt for en gratis vurdering.',
+      'For tiltaksklasse 2 starter det normalt fra ca. 15 000 kr ekskl. mva., og det inkluderer branntegningene dere trenger til søknaden. Vi gir fastpris skriftlig før vi setter i gang — ingen timepris som løper, og ingen tilleggsfakturaer underveis.',
   },
   {
-    question: 'Er befaring nødvendig?',
+    question: 'Trenger dere å besøke bygget mitt fysisk?',
     answer:
-      'I de fleste saker er befaring ikke nødvendig. Med digitale kartdata, tegningsunderlag og bilder kan vi utarbeide god brannprosjektering uten å besøke bygget. Vi gir beskjed hvis vi ser behov for befaring.',
+      'Som regel ikke. God dokumentasjon — plantegninger, snitt, fasader og bilder — er ofte nok til at vi kan gjøre en solid brannprosjektering fra kontoret. Er bygget komplekst nok til at en befaring er nødvendig for et forsvarlig resultat, avtaler vi det med dere først.',
   },
   {
-    question: 'Tilbyr dere håndverkertjenester?',
+    question: 'Kommer dere til å forsøke å selge meg sprinkling eller andre løsninger?',
     answer:
-      'Nei — vi er en nøytral brannrådgiver og selger ingen produkter eller håndverkertjenester. Dette sikrer at rådgivningen alltid er i ditt beste interesse.',
+      'Nei. Vi har ingen produkter eller håndverkertjenester å tjene på, kun rådgivningen. Det betyr at løsningene vi foreslår er styrt av hva som faktisk er nødvendig for prosjektet ditt — ikke av hva som er lønnsomt for oss å selge.',
   },
   {
-    question: 'Hva trengs fra deg for å gi et pristilbud?',
+    question: 'Hvilken informasjon trenger dere fra meg for å starte?',
     answer:
-      'Vi trenger adresse, antall etasjer og bruksareal, plantegninger og en kort prosjektbeskrivelse. Jo mer informasjon vi får, jo mer presist kan vi prise oppdraget. Send det til oss på e-post eller via kontaktskjemaet.',
+      'Adresse eller situasjonsplan, byggesakstegninger (plan, snitt og fasade), en kort beskrivelse av tiltaket, og eventuelle forhåndsuttalelser dere allerede har fått fra kommunen. Send det via kontaktskjemaet, så har dere svar innen 24 timer.',
   },
 ]
 
@@ -91,7 +91,7 @@ export default function BrannprosjekteringPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Brannprosjektering betyr skriftlig planlegging av nødvendig brannsikring i og rundt bygningen. Vi sørger for at bygget ditt — enten det ligger i Skien, Porsgrunn, Kragerø eller andre steder i Telemark — oppfyller alle krav i plan- og bygningsloven og brann- og eksplosjonsvernloven, til fast pris.
+                  Brannprosjektering er den skriftlige dokumentasjonen som viser at bygget ditt tilfredsstiller kravene i plan- og bygningsloven og brann- og eksplosjonsvernloven — dokumentasjon de fleste kommuner i Telemark krever før byggesøknaden kan godkjennes. Vi leverer dette til bygg i Skien, Porsgrunn, Kragerø og resten av regionen, til fast pris avtalt før vi starter.
                 </p>
               </ScrollReveal>
 
@@ -106,15 +106,15 @@ export default function BrannprosjekteringPage() {
                   />
                 </div>
 
-                <h2 className="text-brand-black text-2xl font-black mb-4">Når er det behov for brannprosjektering?</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Tiltak som normalt utløser krav om brannprosjektering</h2>
                 <ul className="space-y-3 mb-8">
                   {[
-                    'Bytte av vinduer eller dører i brannvegg/seksjoneringsvegg',
-                    'Tilbygg eller påbygg på eksisterende bygg',
-                    'Bruksendring (f.eks. garasje til boenhet)',
-                    'Etablering av ny selvstendig boenhet (utleieenhet)',
-                    'Nybygg — boliger, næringsbygg, industribygg',
-                    'Rehabilitering av eldre bygg med branntekniske mangler',
+                    'Ny utleiedel, hybel eller sekundærleilighet i eksisterende bolig',
+                    'Tilbygg eller påbygg — også mindre påbygg kan påvirke rømningsveiene',
+                    'Bruksendring, for eksempel fra garasje eller loft til varig opphold',
+                    'Vindus- eller dørbytte i en brann- eller seksjoneringsvegg',
+                    'Nybygg av bolig, næringsbygg eller industribygg',
+                    'Rehabilitering av eldre bygg der brannsikkerheten ikke er dokumentert',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
@@ -125,36 +125,32 @@ export default function BrannprosjekteringPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Risikoklasser</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Hvordan klassifiseringen styrer omfanget</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-4">
-                  Alle bygg klassifiseres i en risikoklasse (RKL 1–6) ut fra bruksformål og konsekvensen en brann kan få for personer i bygget. Eksempler: RKL 1 (garasjer, lager), RKL 2 (boliger), RKL 4 (kontor, industri, undervisning), RKL 5 (hotell, overnatting) og RKL 6 (sykehus).
+                  Bygget plasseres først i en risikoklasse (RKL 1–6) ut fra bruksformål — en garasje (RKL 1) stiller helt andre krav enn et kontorbygg (RKL 4) eller et sykehjem (RKL 5–6). Risikoklassen, sammen med antall etasjer, bestemmer deretter brannklassen (BKL 1–4), som igjen styrer hvor strenge de branntekniske kravene til akkurat ditt bygg blir.
                 </p>
-              </ScrollReveal>
-
-              <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Brannklasser og tiltaksklasser</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-8">
-                  Brannklassen (BKL 1–4) fastsettes ut fra risikoklasse og antall etasjer, og bestemmer hvilke branntekniske krav bygget må oppfylle. Tiltaksklassen (TKL 1–3) sier noe om kompleksiteten i prosjekteringsoppgaven og hvilken kompetanse som kreves av den prosjekterende. Vi er sentralt godkjent for brannprosjektering i TKL 1 og 2.
+                  I tillegg kommer tiltaksklassen (TKL 1–3), som sier noe om hvor komplekst prosjekteringsarbeidet er og hvilken kompetanse som kreves av den som prosjekterer. Vi er sentralt godkjent for TKL 1 og 2, som dekker de aller fleste bolig-, nærings- og industriprosjekter i Grenland-regionen.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Start tidlig — spar penger</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Hvorfor timingen har mye å si for prisen</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-8">
-                  Jo tidligere i prosjektet du involverer en brannrådgiver, desto enklere og billigere er det å finne gode løsninger. Brannkrav som oppdages sent i prosessen kan kreve dyre konstruksjonsendringer. Vi anbefaler å ta kontakt allerede i skissefasen.
+                  Vi ser ofte samme mønster: brannkravene blir en overraskelse fordi de kommer opp først når byggesøknaden allerede er sendt, eller verre — når bygget er i ferd med å reises. Da er løsningen som regel dyrere enn den trengte å være. Kobler dere oss inn allerede i skissefasen, kan vi som regel finne løsninger som passer inn i planene deres i stedet for å tvinge dem til å endres.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Hva vi tilbyr</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Dette er inkludert i oppdraget</h2>
                 <ul className="space-y-3 mb-8">
                   {[
-                    'Brannkonsept og brannteknisk notat',
-                    'Branntegninger (brannceller, rømningsveier, seksjoneringer)',
-                    'Ansvarsrett overfor kommunen i tiltaksklasse 1 og 2',
-                    'Fastpris — ingen overraskelser',
-                    'Levering innen 5–10 virkedager',
-                    'God oppfølging gjennom hele byggesaken',
+                    'Brannkonsept eller brannteknisk notat, avhengig av hva tiltaket krever',
+                    'Branntegninger klare til å legges ved byggesøknaden',
+                    'Erklæring om ansvarsrett overfor kommunen i tiltaksklasse 1 og 2',
+                    'Fastpris avtalt skriftlig før oppstart',
+                    'Normal leveringstid på 5–10 virkedager',
+                    'Løpende tilgjengelighet for spørsmål frem til byggesaken er avsluttet',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
@@ -165,13 +161,13 @@ export default function BrannprosjekteringPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4">Hva vi trenger fra deg</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4">Dette trenger vi fra dere for å komme i gang</h2>
                 <ul className="space-y-3 mb-10">
                   {[
-                    'Situasjonsplan / adresse',
-                    'Byggesakstegninger (plan, snitt, fasade)',
-                    'Kort prosjektbeskrivelse',
-                    'Eventuelle forhåndsuttalelser fra kommunen',
+                    'Adresse eller situasjonsplan for tomten/bygget',
+                    'Byggesakstegninger — plan, snitt og fasade',
+                    'En kort beskrivelse av hva som skal gjøres',
+                    'Eventuelle forhåndsuttalelser dere allerede har fått fra kommunen',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
@@ -232,7 +228,7 @@ export default function BrannprosjekteringPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Be om tilbud på brannprosjektering i Skien, Porsgrunn eller Telemark
+              Involver oss tidlig — send tegningene og få et fastpristilbud
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Få tilbud nå
