@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Kontakt Brannkonsult AS | Få uforpliktende tilbud',
@@ -11,9 +12,18 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.skienbrannkonsult.no/kontakt-oss' },
 }
 
+const breadcrumb = breadcrumbSchema([
+  { name: 'Hjem', path: '/' },
+  { name: 'Kontakt oss', path: '/kontakt-oss' },
+])
+
 export default function KontaktOssPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">

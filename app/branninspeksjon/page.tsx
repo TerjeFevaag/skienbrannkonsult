@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Phone, Mail, AlertTriangle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Branntilsyn og branninspeksjon i Skien og Telemark | Brannkonsult AS',
@@ -45,9 +46,24 @@ const faqItems = [
   },
 ]
 
+const breadcrumb = breadcrumbSchema([
+  { name: 'Hjem', path: '/' },
+  { name: 'Branninspeksjon', path: '/branninspeksjon' },
+])
+
+const faq = faqSchema(faqItems)
+
 export default function BranninspeksjonPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+      />
       <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver',
@@ -19,9 +20,18 @@ const process = [
   { step: '5', title: 'Dokumentasjon levert', desc: 'Komplett leveranse klar for kommunen.' },
 ]
 
+const breadcrumb = breadcrumbSchema([
+  { name: 'Hjem', path: '/' },
+  { name: 'Om oss', path: '/om-oss' },
+])
+
 export default function OmOssPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       {/* Header */}
       <section className="bg-brand-dark py-16 lg:py-24">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">

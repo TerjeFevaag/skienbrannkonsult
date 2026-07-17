@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Riktig røykvarsler redder liv | Brannkonsult AS',
@@ -10,9 +11,19 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.skienbrannkonsult.no/artikler/roykvarsler' },
 }
 
+const breadcrumb = breadcrumbSchema([
+  { name: 'Hjem', path: '/' },
+  { name: 'Artikler', path: '/' },
+  { name: 'Riktig røykvarsler', path: '/artikler/roykvarsler' },
+])
+
 export default function RoykVarslerPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <section className="bg-brand-dark py-12 lg:py-16">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-orange text-sm mb-4">
