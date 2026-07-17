@@ -6,9 +6,9 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Brannkonsept i Skien | Brannkonsult AS',
+  title: 'Brannkonsept i Skien og Telemark | Brannkonsult AS',
   description:
-    'Brannkonsult AS utarbeider brannkonsept i Skien og på Telemark. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
+    'Brannkonsult AS utarbeider brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no/brannkonsept' },
 }
 
@@ -27,6 +27,11 @@ const faqItems = [
     question: 'Hva koster et brannkonsept i Skien?',
     answer:
       'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris slik at du slipper ubehagelige overraskelser. Send oss informasjon om prosjektet for et nøyaktig tilbud.',
+  },
+  {
+    question: 'Utarbeider dere brannkonsept i Porsgrunn og Kragerø også?',
+    answer:
+      'Ja. Vi tar oppdrag i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome — samt resten av landet ved behov. De fleste brannkonsept kan utarbeides uten fysisk befaring, uansett hvor bygget ligger.',
   },
   {
     question: 'Tilbyr dere håndverkertjenester?',
@@ -57,10 +62,10 @@ export default function BrannkonseptPage() {
             <span>Brannkonsept</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black max-w-2xl">
-            Brannkonsept i Skien
+            Brannkonsept i Skien og Telemark
           </h1>
           <p className="hero-3 text-brand-white/70 text-lg mt-4 max-w-xl leading-relaxed">
-            Vi utarbeider helhetlige brannkonsept for byggesaker i Skien og på Telemark. Fastpris, rask levering og sentral godkjenning.
+            Vi utarbeider helhetlige brannkonsept for byggesaker i Skien, Porsgrunn, Kragerø og resten av Telemark. Fastpris, rask levering og sentral godkjenning.
           </p>
         </div>
       </section>
@@ -73,7 +78,7 @@ export default function BrannkonseptPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Et brannkonsept er en skriftlig rapport som oppsummerer bygningens brannsikkerhetsnivå. Ved byggesaker krever kommunen som regel prosjekteringsdokumentasjon på brannkonseptnivå — en helhetlig overordnet plan som ivaretar brannsikkerheten både for det omsøkte tiltaket og den øvrige bygningsmassen. Vi hjelper private, arkitekter, industribedrifter og utbyggere i Skien og omegn med å utarbeide komplette brannkonsept til fast pris.
+                  Et brannkonsept er en skriftlig rapport som oppsummerer bygningens brannsikkerhetsnivå. Ved byggesaker krever kommunen som regel prosjekteringsdokumentasjon på brannkonseptnivå — en helhetlig overordnet plan som ivaretar brannsikkerheten både for det omsøkte tiltaket og den øvrige bygningsmassen. Vi hjelper private, arkitekter, industribedrifter og utbyggere i Skien, Porsgrunn, Kragerø og resten av Telemark med å utarbeide komplette brannkonsept til fast pris.
                 </p>
               </ScrollReveal>
 
@@ -220,7 +225,7 @@ export default function BrannkonseptPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Kontakt oss for uforpliktende tilbud på brannkonsept i Skien
+              Kontakt oss for uforpliktende tilbud på brannkonsept i Skien, Porsgrunn eller Telemark
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Få tilbud nå

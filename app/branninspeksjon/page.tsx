@@ -6,9 +6,9 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Branntilsyn og branninspeksjon i Skien | Brannkonsult AS',
+  title: 'Branntilsyn og branninspeksjon i Skien og Telemark | Brannkonsult AS',
   description:
-    'Branntilsyn og branninspeksjon i Skien. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
+    'Branntilsyn og branninspeksjon i Skien, Porsgrunn, Kragerø og resten av Telemark. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no/branninspeksjon' },
 }
 
@@ -36,7 +36,12 @@ const faqItems = [
   {
     question: 'Gjelder oppgraderingskravet for alle eldre bygninger?',
     answer:
-      'Ja — alle eksisterende bygninger skal oppgraderes til et minimum tilsvarende det som gjaldt for nybygg i 1985 (BF85). For mange eldre bygg og industrianlegg i Skien betyr dette at det er behov for tiltak. Vi hjelper deg med å vurdere hva som er nødvendig.',
+      'Ja — alle eksisterende bygninger skal oppgraderes til et minimum tilsvarende det som gjaldt for nybygg i 1985 (BF85). For mange eldre bygg og industrianlegg i Skien, Porsgrunn og resten av Telemark betyr dette at det er behov for tiltak. Vi hjelper deg med å vurdere hva som er nødvendig.',
+  },
+  {
+    question: 'Utfører dere branninspeksjon i Porsgrunn og Kragerø?',
+    answer:
+      'Ja, vi tar branninspeksjonsoppdrag i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome. Ta kontakt uansett hvor bygget ditt ligger, så avtaler vi videre gang.',
   },
 ]
 
@@ -51,7 +56,7 @@ export default function BranninspeksjonPage() {
             <span>Branninspeksjon</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black max-w-2xl">
-            Branntilsyn og branninspeksjon i Skien
+            Branntilsyn og branninspeksjon i Skien og Telemark
           </h1>
           <p className="hero-3 text-brand-white/70 text-lg mt-4 max-w-xl leading-relaxed">
             Fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet?
@@ -65,7 +70,7 @@ export default function BranninspeksjonPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Har kommunen vært på branntilsyn, eller ønsker du å kartlegge brannsikkerheten i en eldre bygning i Skien? Vi hjelper borettslag, sameier, næringsbygg, industribedrifter og eiendomseiere med branninspeksjon og vurdering av byggets brannsikkerhet.
+                  Har kommunen vært på branntilsyn, eller ønsker du å kartlegge brannsikkerheten i en eldre bygning i Skien, Porsgrunn, Kragerø eller andre steder i Telemark? Vi hjelper borettslag, sameier, næringsbygg, industribedrifter og eiendomseiere med branninspeksjon og vurdering av byggets brannsikkerhet.
                 </p>
               </ScrollReveal>
 
@@ -82,7 +87,7 @@ export default function BranninspeksjonPage() {
 
                 <h2 className="text-brand-black text-2xl font-black mb-4">Krav til oppgradering</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-8">
-                  Alle bygninger i Norge skal tilfredsstille et minimum brannsikkerhetsnivå tilsvarende det som gjaldt for nybygg i 1985 (BF85). Eldre bygg som ikke oppfyller dette kravet skal utbedres. Skien har en variert bygningsmasse med eldre industribebyggelse og trehus som kan ha behov for branntekniske tiltak.
+                  Alle bygninger i Norge skal tilfredsstille et minimum brannsikkerhetsnivå tilsvarende det som gjaldt for nybygg i 1985 (BF85). Eldre bygg som ikke oppfyller dette kravet skal utbedres. Skien, Porsgrunn, Kragerø og resten av Telemark har en variert bygningsmasse med eldre industribebyggelse og trehus som kan ha behov for branntekniske tiltak.
                 </p>
               </ScrollReveal>
 
@@ -185,7 +190,7 @@ export default function BranninspeksjonPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Kontakt oss for hjelp etter branntilsyn i Skien
+              Kontakt oss for hjelp etter branntilsyn i Skien, Porsgrunn eller Telemark
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Kontakt oss

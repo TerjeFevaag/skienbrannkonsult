@@ -6,9 +6,9 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Skien | Brannkonsult AS',
+  title: 'Brannprosjektering i Skien og Telemark | Brannkonsult AS',
   description:
-    'Profesjonell brannprosjektering i Skien og på Telemark. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg.',
+    'Profesjonell brannprosjektering i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no/brannprosjektering' },
 }
 
@@ -17,6 +17,11 @@ const faqItems = [
     question: 'Hva koster brannprosjektering i Skien?',
     answer:
       'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris. Send oss tegninger og prosjektbeskrivelse for et nøyaktig tilbud.',
+  },
+  {
+    question: 'Tar dere oppdrag i Porsgrunn og Kragerø også?',
+    answer:
+      'Ja, vi utfører brannprosjektering i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome. Befaring er sjelden nødvendig, så avstand er normalt ikke noe hinder for prosjektet ditt.',
   },
   {
     question: 'Trenger jeg brannprosjektering for tilbygg eller bruksendring?',
@@ -51,10 +56,10 @@ export default function BrannprosjekteringPage() {
             <span>Brannprosjektering</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black max-w-2xl">
-            Brannprosjektering i Skien
+            Brannprosjektering i Skien og Telemark
           </h1>
           <p className="hero-3 text-brand-white/70 text-lg mt-4 max-w-xl leading-relaxed">
-            Vi sørger for at bygget ditt oppfyller alle krav til brannsikkerhet — til fast pris og med rask levering.
+            Vi sørger for at bygget ditt i Skien, Porsgrunn, Kragerø eller andre steder i Telemark oppfyller alle krav til brannsikkerhet — til fast pris og med rask levering.
           </p>
         </div>
       </section>
@@ -65,7 +70,7 @@ export default function BrannprosjekteringPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Brannprosjektering betyr skriftlig planlegging av nødvendig brannsikring i og rundt bygningen. Vi sørger for at ditt bygg i Skien oppfyller alle krav i plan- og bygningsloven og brann- og eksplosjonsvernloven — til fast pris.
+                  Brannprosjektering betyr skriftlig planlegging av nødvendig brannsikring i og rundt bygningen. Vi sørger for at bygget ditt — enten det ligger i Skien, Porsgrunn, Kragerø eller andre steder i Telemark — oppfyller alle krav i plan- og bygningsloven og brann- og eksplosjonsvernloven, til fast pris.
                 </p>
               </ScrollReveal>
 
@@ -206,7 +211,7 @@ export default function BrannprosjekteringPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Be om tilbud på brannprosjektering i Skien
+              Be om tilbud på brannprosjektering i Skien, Porsgrunn eller Telemark
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Få tilbud nå

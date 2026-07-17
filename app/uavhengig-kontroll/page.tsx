@@ -6,9 +6,9 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Uavhengig kontroll av brann i Skien | Brannkonsult AS',
+  title: 'Uavhengig kontroll av brann i Skien og Telemark | Brannkonsult AS',
   description:
-    'Uavhengig kontroll (UK) av brannkonsept i Skien. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.',
+    'Uavhengig kontroll (UK) av brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.',
   alternates: { canonical: 'https://www.skienbrannkonsult.no/uavhengig-kontroll' },
 }
 
@@ -33,6 +33,11 @@ const faqItems = [
     answer:
       'Ja — det er faktisk et krav at den som utfører UK ikke er den samme som har prosjektert. Vi kan ta på oss uavhengig kontroll av brannkonsept utarbeidet av andre rådgivere.',
   },
+  {
+    question: 'Utfører dere uavhengig kontroll i Porsgrunn og Kragerø?',
+    answer:
+      'Ja, vi tar UK-oppdrag i hele Grenland og Telemark — inkludert Skien, Porsgrunn, Kragerø, Bamble, Siljan og Nome. Kontrollen gjøres i all hovedsak som en dokumentgjennomgang, så avstand er sjelden et problem.',
+  },
 ]
 
 export default function UavhengigKontrollPage() {
@@ -46,10 +51,10 @@ export default function UavhengigKontrollPage() {
             <span>Uavhengig kontroll</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black max-w-2xl">
-            Uavhengig kontroll av brannkonsept i Skien
+            Uavhengig kontroll av brannkonsept i Skien og Telemark
           </h1>
           <p className="hero-3 text-brand-white/70 text-lg mt-4 max-w-xl leading-relaxed">
-            Krav om UK brann? Vi gjennomgår brannkonseptet og utfører uavhengig kontroll for byggesaker i Skien og på Telemark.
+            Krav om UK brann? Vi gjennomgår brannkonseptet og utfører uavhengig kontroll for byggesaker i Skien, Porsgrunn, Kragerø og resten av Telemark.
           </p>
         </div>
       </section>
@@ -140,7 +145,7 @@ export default function UavhengigKontrollPage() {
                 <div className="rounded-[20px] border border-brand-gray p-6 bg-brand-dark">
                   <h3 className="font-bold text-xl mb-3 text-brand-white">Trenger du UK brann?</h3>
                   <p className="text-brand-white/60 text-sm mb-6 leading-relaxed">
-                    Ta kontakt for uforpliktende tilbud på uavhengig kontroll av brannkonsept i Skien.
+                    Ta kontakt for uforpliktende tilbud på uavhengig kontroll av brannkonsept i Skien, Porsgrunn eller Telemark.
                   </p>
                   <Link href="/kontakt-oss" className="block bg-brand-orange text-brand-white font-bold px-6 py-3.5 rounded-[10px] text-center hover:opacity-90 transition-opacity mb-6">
                     Kontakt oss
@@ -178,7 +183,7 @@ export default function UavhengigKontrollPage() {
         <section className="bg-brand-dark py-14">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-6">
-              Kontakt oss for uavhengig kontroll i Skien
+              Kontakt oss for uavhengig kontroll i Skien, Porsgrunn eller Telemark
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
               Kontakt oss
