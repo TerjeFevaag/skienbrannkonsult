@@ -37,6 +37,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brannprosjektering i Skien | Brannkonsult AS',
+    description:
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark.',
+    images: ['/images/hero.jpg'],
+  },
 }
 
 const jsonLd = {
@@ -63,6 +70,14 @@ const jsonLd = {
   url: 'https://www.skienbrannkonsult.no',
   priceRange: 'Fra kr 15 000',
   hasCredential: 'Sentralt godkjent tiltaksklasse 1 og 2',
+  logo: 'https://www.skienbrannkonsult.no/images/logo-black.png',
+  image: 'https://www.skienbrannkonsult.no/images/om-oss.jpg',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '16:00',
+  },
 }
 
 export default function RootLayout({

@@ -3,12 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Har du riktig brannslokkeapparat? | Brannkonsult AS'
+const description =
+  'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Brannkonsult AS.'
 
 export const metadata: Metadata = {
-  title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
-  description:
-    'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Brannkonsult AS.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/artikler/brannslokker' },
+  ...socialMetadata({ title, description, path: '/artikler/brannslokker', image: '/images/article-brannslukker.jpg' }),
 }
 
 const breadcrumb = breadcrumbSchema([
@@ -46,7 +51,7 @@ export default function BrannslokkePage() {
               <div className="relative rounded-[20px] overflow-hidden h-72 lg:h-96 mb-10">
                 <Image
                   src="/images/article-brannslukker.jpg"
-                  alt="Brannslokkeapparat"
+                  alt="Håndslokkeapparat for slokking av brann i bolig"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 800px"

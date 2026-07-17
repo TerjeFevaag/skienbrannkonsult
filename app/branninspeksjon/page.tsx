@@ -5,12 +5,17 @@ import { Phone, Mail, AlertTriangle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Branntilsyn og branninspeksjon i Skien og Telemark | Brannkonsult AS'
+const description =
+  'Branntilsyn og branninspeksjon i Skien, Porsgrunn, Kragerø og resten av Telemark. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.'
 
 export const metadata: Metadata = {
-  title: 'Branntilsyn og branninspeksjon i Skien og Telemark | Brannkonsult AS',
-  description:
-    'Branntilsyn og branninspeksjon i Skien, Porsgrunn, Kragerø og resten av Telemark. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/branninspeksjon' },
+  ...socialMetadata({ title, description, path: '/branninspeksjon', image: '/images/service-branntilsyn.jpg' }),
 }
 
 const faqItems = [

@@ -5,12 +5,17 @@ import { Phone, Mail, CheckCircle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Brannprosjektering i Skien og Telemark | Brannkonsult AS'
+const description =
+  'Profesjonell brannprosjektering i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg.'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Skien og Telemark | Brannkonsult AS',
-  description:
-    'Profesjonell brannprosjektering i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/brannprosjektering' },
+  ...socialMetadata({ title, description, path: '/brannprosjektering', image: '/images/service-brannprosjektering.jpg' }),
 }
 
 const faqItems = [

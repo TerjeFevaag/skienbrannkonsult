@@ -3,12 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Forebygg pipebrann med enkle grep | Brannkonsult AS'
+const description =
+  'Lær hvordan du forebygger pipebrann. Regelmessig feieservice, riktig ved og god trekk er nøkkelen. Råd fra sentralt godkjente brannrådgivere i Skien.'
 
 export const metadata: Metadata = {
-  title: 'Forebygg pipebrann med enkle grep | Brannkonsult AS',
-  description:
-    'Lær hvordan du forebygger pipebrann. Regelmessig feieservice, riktig ved og god trekk er nøkkelen. Råd fra sentralt godkjente brannrådgivere i Skien.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/artikler/pipebrann' },
+  ...socialMetadata({ title, description, path: '/artikler/pipebrann', image: '/images/article-pipebrann.jpg' }),
 }
 
 const breadcrumb = breadcrumbSchema([
@@ -46,7 +51,7 @@ export default function PipebrannPage() {
               <div className="relative rounded-[20px] overflow-hidden h-72 lg:h-96 mb-10">
                 <Image
                   src="/images/article-pipebrann.jpg"
-                  alt="Forebygg pipebrann"
+                  alt="Pipeløp og ildsted i en bolig"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 800px"

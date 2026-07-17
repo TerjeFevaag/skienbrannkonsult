@@ -5,12 +5,17 @@ import { Phone, Mail, CheckCircle, ShieldCheck } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Uavhengig kontroll av brann i Skien og Telemark | Brannkonsult AS'
+const description =
+  'Uavhengig kontroll (UK) av brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.'
 
 export const metadata: Metadata = {
-  title: 'Uavhengig kontroll av brann i Skien og Telemark | Brannkonsult AS',
-  description:
-    'Uavhengig kontroll (UK) av brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/uavhengig-kontroll' },
+  ...socialMetadata({ title, description, path: '/uavhengig-kontroll', image: '/images/service-uavhengig-kontroll.jpg' }),
 }
 
 const faqItems = [

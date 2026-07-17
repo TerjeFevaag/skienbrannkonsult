@@ -4,12 +4,17 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Kontakt Brannkonsult AS | Få uforpliktende tilbud'
+const description =
+  'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Skien. Vi svarer innen 24 timer. Ring +47 000 00 000.'
 
 export const metadata: Metadata = {
-  title: 'Kontakt Brannkonsult AS | Få uforpliktende tilbud',
-  description:
-    'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Skien. Vi svarer innen 24 timer. Ring +47 000 00 000.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/kontakt-oss' },
+  ...socialMetadata({ title, description, path: '/kontakt-oss', image: '/images/hero.jpg' }),
 }
 
 const breadcrumb = breadcrumbSchema([

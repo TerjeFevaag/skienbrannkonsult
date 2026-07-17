@@ -4,12 +4,17 @@ import Link from 'next/link'
 import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver'
+const description =
+  'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark.'
 
 export const metadata: Metadata = {
-  title: 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver',
-  description:
-    'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/om-oss' },
+  ...socialMetadata({ title, description, path: '/om-oss', image: '/images/om-oss.jpg' }),
 }
 
 const process = [
@@ -84,7 +89,7 @@ export default function OmOssPage() {
               <div className="relative rounded-[20px] overflow-hidden h-80 lg:h-96">
                 <Image
                   src="/images/om-oss.jpg"
-                  alt="Brannkonsult AS team"
+                  alt="Brannrådgivere fra Brannkonsult AS"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"

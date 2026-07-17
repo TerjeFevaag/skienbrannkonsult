@@ -3,12 +3,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Riktig røykvarsler redder liv | Brannkonsult AS'
+const description =
+  'Krav til røykvarslere i norske boliger, forskjell mellom ionisasjon og optisk varsler, og anbefalt plassering. Råd fra sentralt godkjente brannrådgivere i Skien.'
 
 export const metadata: Metadata = {
-  title: 'Riktig røykvarsler redder liv | Brannkonsult AS',
-  description:
-    'Krav til røykvarslere i norske boliger, forskjell mellom ionisasjon og optisk varsler, og anbefalt plassering. Råd fra sentralt godkjente brannrådgivere i Skien.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/artikler/roykvarsler' },
+  ...socialMetadata({ title, description, path: '/artikler/roykvarsler', image: '/images/article-roykvarsler.jpg' }),
 }
 
 const breadcrumb = breadcrumbSchema([
@@ -46,7 +51,7 @@ export default function RoykVarslerPage() {
               <div className="relative rounded-[20px] overflow-hidden h-72 lg:h-96 mb-10">
                 <Image
                   src="/images/article-roykvarsler.jpg"
-                  alt="Røykvarsler"
+                  alt="Røykvarsler montert i taket for tidlig varsling ved brann"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 800px"

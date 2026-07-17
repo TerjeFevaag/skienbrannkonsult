@@ -5,12 +5,17 @@ import { FileText, Phone, Mail, CheckCircle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Brannkonsept i Skien og Telemark | Brannkonsult AS'
+const description =
+  'Brannkonsult AS utarbeider brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.'
 
 export const metadata: Metadata = {
-  title: 'Brannkonsept i Skien og Telemark | Brannkonsult AS',
-  description:
-    'Brannkonsult AS utarbeider brannkonsept i Skien, Porsgrunn, Kragerø og resten av Telemark. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no/brannkonsept' },
+  ...socialMetadata({ title, description, path: '/brannkonsept', image: '/images/service-brannkonsept.jpg' }),
 }
 
 const faqItems = [

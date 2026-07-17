@@ -7,12 +7,17 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from '@/components/ContactForm'
+import { socialMetadata } from '@/lib/seo'
+
+const title = 'Brannprosjektering i Skien | Brannkonsult AS'
+const description =
+  'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Skien | Brannkonsult AS',
-  description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+  title,
+  description,
   alternates: { canonical: 'https://www.skienbrannkonsult.no' },
+  ...socialMetadata({ title, description, path: '/', image: '/images/hero.jpg' }),
 }
 
 const services = [
