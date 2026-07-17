@@ -88,25 +88,24 @@ const gettingStarted = [
 const reviews = [
   {
     quote:
-      'Jeg fikk hjelp med en ny boenhet i Bergen Sentrum. Rask tilbakemelding og grundig rapport. Anbefaler andre å bruke Brannkonsult AS!',
-    author: 'Jan-David Antonsen',
-    company: 'Anton Arkitekt AS',
+      'Rask og god kommunikasjon. Leverte raskt det vi trengte av dokumentasjon til en fornuftig pris. Ble ikke tilbudt en dyr dokumentasjonspakke, som var overdimensjonert i henhold til vårt prosjekt. Veldig fornøyd!',
+    author: 'Heidi Spinnangr',
   },
   {
     quote:
-      'På spørsmål om brannkonsept, og ansvarsrett for fagområdet, fikk vi raskt og proffesjonelt svar. Hyggelig, ryddig og konstruktiv oppfølging.',
-    author: 'Sivilarkitekt Sverre Krefting',
+      'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
+    author: 'Jon Cederbrand Arkitektur AS',
   },
   {
     quote:
-      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Alt til bra priser.',
-    author: 'Vegard Hals',
+      'Ga rask tilbakemelding ved første kontakt. Leverte til avtalt tid og pris. Høy kvalitet på arbeidet. Veldig behjelpelig med å svare på andre spørsmål i ettertid, vederlagsfritt. Kommer til å bruke Brannkonsult AS videre fremover i kommende prosjekter.',
+    author: 'Jonathan Steinsvik',
   },
   {
     quote:
-      'Vi brukte Brannkonsult AS i forbindelse med et tilbygg på en barnehage. Enkelt og greit — godt fornøyd med hele prosessen.',
-    author: 'Håvard Musdalslien',
-    company: 'Contre AS',
+      'Brannkonsult leverte rask, effektivt og ryddig. God kommunikasjon i prosessen og sluttproduktet var veldig bra og ingen dyre overraskelser.',
+    author: 'Erland Tullut',
+    company: 'JT Utvikling AS',
   },
 ]
 
