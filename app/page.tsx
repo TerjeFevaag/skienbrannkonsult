@@ -11,7 +11,7 @@ import { socialMetadata } from '@/lib/seo'
 
 const title = 'Brannprosjektering i Skien | Brannkonsult AS'
 const description =
-  'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien og på Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.'
+  'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien, Porsgrunn og resten av Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.'
 
 export const metadata: Metadata = {
   title,
@@ -132,7 +132,7 @@ const faqItems = [
   },
   {
     question: 'Tar dere oppdrag utenfor Skien?',
-    answer: 'Vi hjelper kunder i Skien, Telemark og hele landet.',
+    answer: 'Ja, vi hjelper kunder i Skien, Porsgrunn, resten av Telemark og hele landet.',
   },
 ]
 
@@ -177,13 +177,13 @@ export default function HomePage() {
         <div className="relative z-10 max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
           <div className="max-w-xl">
             <p className="hero-1 text-brand-orange text-sm font-bold uppercase tracking-wide mb-4">
-              Skien og Telemark
+              Skien, Porsgrunn og Telemark
             </p>
             <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl xl:text-6xl font-black leading-tight mb-6">
               Brannprosjektering som følger deg trygt gjennom hele byggeprosessen
             </h1>
             <p className="hero-3 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-8">
-              Vi hjelper deg med brannprosjektering i Skien og Telemark. Sentralt godkjent foretak
+              Vi hjelper deg med brannprosjektering i Skien, Porsgrunn og resten av Telemark. Sentralt godkjent foretak
               med over 1200 gjennomførte prosjekter — fast pris og rask levering.
             </p>
             <div className="hero-4 flex flex-wrap gap-4">
@@ -232,15 +232,15 @@ export default function HomePage() {
             <ScrollReveal>
               <p className="text-brand-orange text-xs font-bold uppercase tracking-wide mb-2">Om oss</p>
               <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-6">
-                Lokalkunnskap fra Skien og Telemark
+                Lokalkunnskap fra Skien, Porsgrunn og Telemark
               </h2>
               <p className="text-brand-white/70 leading-relaxed mb-4">
                 Skien er den historiske innfartsporten til Telemarkskanalen, kjent for sluseanlegget
-                på Vrangfoss som løfter båter trinnvis gjennom fem kamre. Byen har også en lang
-                industrihistorie gjennom Union og Norsk Hydro, med en bygningsmasse som spenner fra
-                eldre trehusbebyggelse i sentrum til moderne industri- og boligbygg. Vi leverer
-                brannkonsept og brannprosjektering til private, arkitekter og utbyggere i hele Skien
-                og på Telemark.
+                på Vrangfoss som løfter båter trinnvis gjennom fem kamre. Regionen har også en lang
+                industrihistorie — Union i Skien og Norsk Hydros anlegg på Herøya i Porsgrunn — med
+                en bygningsmasse som spenner fra eldre trehusbebyggelse i sentrum til store
+                industrianlegg langs Frierfjorden. Vi leverer brannkonsept og brannprosjektering til
+                private, arkitekter og utbyggere i Skien, Porsgrunn og resten av Telemark.
               </p>
               <Link
                 href="/om-oss"
@@ -398,7 +398,7 @@ export default function HomePage() {
             </h2>
             <p className="text-brand-white/70 text-lg mb-8 max-w-xl mx-auto">
               Over 1200 gjennomførte prosjekter og sentral godkjenning i tiltaksklasse 1 og 2. Ta
-              kontakt i dag for et uforpliktende tilbud på brannprosjektering i Skien.
+              kontakt i dag for et uforpliktende tilbud på brannprosjektering i Skien, Porsgrunn eller Telemark.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
