@@ -9,7 +9,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import ContactForm from '@/components/ContactForm'
 import { socialMetadata } from '@/lib/seo'
 
-const title = 'Brannprosjektering i Skien | Brannkonsult AS'
+const title = 'Brannprosjektering i Skien, Porsgrunn og Telemark | Brannkonsult AS'
 const description =
   'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Skien, Porsgrunn og resten av Telemark. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.'
 
