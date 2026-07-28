@@ -10,11 +10,30 @@ const PROSJEKTTYPE_LABELS: Record<string, string> = {
   annet: 'Annet',
 }
 
+type Attachment = { name: string; url: string; size: number }
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
+}
+
+function isValidAttachment(value: unknown): value is Attachment {
+  if (!value || typeof value !== 'object') return false
+  const a = value as Record<string, unknown>
+  if (typeof a.name !== 'string' || typeof a.size !== 'number') return false
+  if (typeof a.url !== 'string') return false
+  try {
+    return new URL(a.url).protocol === 'https:'
+  } catch {
+    return false
+  }
+}
+
+function formatFileSize(bytes: number) {
+  if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
 }
 
 export async function POST(request: Request) {
@@ -33,6 +52,9 @@ export async function POST(request: Request) {
   const telefon = typeof body.telefon === 'string' ? body.telefon.trim() : ''
   const prosjekttype = typeof body.prosjekttype === 'string' ? body.prosjekttype.trim() : ''
   const melding = typeof body.melding === 'string' ? body.melding.trim() : ''
+  const vedlegg: Attachment[] = Array.isArray(body.vedlegg)
+    ? (body.vedlegg as unknown[]).filter(isValidAttachment)
+    : []
 
   if (!navn || !epost || !melding) {
     return NextResponse.json(
@@ -55,6 +77,9 @@ export async function POST(request: Request) {
     prosjekttypeLabel ? `Prosjekttype: ${prosjekttypeLabel}` : null,
     '',
     melding,
+    vedlegg.length > 0
+      ? `\nVedlegg:\n${vedlegg.map((a) => `- ${a.name} (${formatFileSize(a.size)}): ${a.url}`).join('\n')}`
+      : null,
   ].filter((line): line is string => line !== null)
 
   const htmlLines = [
@@ -63,6 +88,11 @@ export async function POST(request: Request) {
     telefon ? `<p><strong>Telefon:</strong> ${escapeHtml(telefon)}</p>` : null,
     prosjekttypeLabel ? `<p><strong>Prosjekttype:</strong> ${escapeHtml(prosjekttypeLabel)}</p>` : null,
     `<p><strong>Melding:</strong></p><p>${escapeHtml(melding).replace(/\n/g, '<br>')}</p>`,
+    vedlegg.length > 0
+      ? `<p><strong>Vedlegg:</strong></p><ul>${vedlegg
+          .map((a) => `<li><a href="${escapeHtml(a.url)}">${escapeHtml(a.name)}</a> (${formatFileSize(a.size)})</li>`)
+          .join('')}</ul>`
+      : null,
   ].filter((line): line is string => line !== null)
 
   const mailerSendResponse = await fetch('https://api.mailersend.com/v1/email', {
