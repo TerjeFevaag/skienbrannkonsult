@@ -88,18 +88,19 @@ const gettingStarted = [
 const reviews = [
   {
     quote:
-      'Rask og god kommunikasjon. Leverte raskt det vi trengte av dokumentasjon til en fornuftig pris. Ble ikke tilbudt en dyr dokumentasjonspakke, som var overdimensjonert i henhold til vårt prosjekt. Veldig fornøyd!',
-    author: 'Heidi Spinnangr',
+      'Informasjonen og visualiseringen i tilsendte rapporter har vært meget bra. I tillegg har Brannkonsult vært imøtekommende for ytterligere spørsmål, og behjelpelig med også andre korte spørsmål om andre ting.',
+    author: 'Magne Sjømark',
+    company: 'Sjusjø AS',
   },
   {
     quote:
-      'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
-    author: 'Jon Cederbrand Arkitektur AS',
+      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
+    author: 'Kirsti Andresen',
   },
   {
     quote:
-      'Ga rask tilbakemelding ved første kontakt. Leverte til avtalt tid og pris. Høy kvalitet på arbeidet. Veldig behjelpelig med å svare på andre spørsmål i ettertid, vederlagsfritt. Kommer til å bruke Brannkonsult AS videre fremover i kommende prosjekter.',
-    author: 'Jonathan Steinsvik',
+      'Raskt svar og god hjelp. Meget godt gjennomført brannkonsept som var greit å skjønne. Gode tips og forslag til endringer underveis. Meget fornøyd!',
+    author: 'Sandra Roksøy',
   },
   {
     quote:
