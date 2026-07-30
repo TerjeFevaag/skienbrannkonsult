@@ -88,19 +88,19 @@ const gettingStarted = [
 const reviews = [
   {
     quote:
-      'Informasjonen og visualiseringen i tilsendte rapporter har vært meget bra. I tillegg har Brannkonsult vært imøtekommende for ytterligere spørsmål, og behjelpelig med også andre korte spørsmål om andre ting.',
-    author: 'Magne Sjømark',
-    company: 'Sjusjø AS',
+      'Svært fornøyd. Tar seg tid til å drøfte fornuftige og økonomiske løsninger. Setter pris på at dere er med på en forhåndsvurdering på telefon før bestilling av prosjektering.',
+    author: 'Clas Marberg',
+    company: 'Marberg Bygg- og Tegneservice',
   },
   {
     quote:
-      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
-    author: 'Kirsti Andresen',
+      'Jeg opplevde rask respons på min henvendelse, at jeg ble vennlig mottatt og at brannprosjekteringen av mitt utbyggingsprosjekt ble prioritert og like så godt utført.',
+    author: 'Mai Elin Wehn',
   },
   {
     quote:
-      'Raskt svar og god hjelp. Meget godt gjennomført brannkonsept som var greit å skjønne. Gode tips og forslag til endringer underveis. Meget fornøyd!',
-    author: 'Sandra Roksøy',
+      'Fornøyd med å få hjelp og råd til å få godkjent kjellervindu med hensyn til brannforskrifter.',
+    author: 'Anders Reitan',
   },
   {
     quote:
