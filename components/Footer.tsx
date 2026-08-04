@@ -62,8 +62,8 @@ export default function Footer() {
               deg med brannkonsept, brannprosjektering og branninspeksjon i Skien, Porsgrunn og resten av Telemark.
             </p>
             <div className="space-y-2.5 text-sm mb-6">
-              <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">
-                <Phone size={13} /> +47 000 00 000
+              <a href="tel:+4797293977" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">
+                <Phone size={13} /> +47 972 93 977
               </a>
               <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors">
                 <Mail size={13} /> post@skienbrannkonsult.no

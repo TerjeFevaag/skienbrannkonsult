@@ -409,7 +409,7 @@ export default function HomePage() {
                 Få gratis tilbud
               </Link>
               <a
-                href="tel:+4700000000"
+                href="tel:+4797293977"
                 className="border-2 border-brand-white text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:bg-brand-white hover:text-brand-black transition-all duration-200 flex items-center gap-2"
               >
                 <Phone size={16} /> Ring oss
@@ -435,8 +435,8 @@ export default function HomePage() {
                 prosjektet ditt.
               </p>
               <div className="space-y-3 text-sm">
-                <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors">
-                  <Phone size={16} /> +47 000 00 000
+                <a href="tel:+4797293977" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors">
+                  <Phone size={16} /> +47 972 93 977
                 </a>
                 <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors">
                   <Mail size={16} /> post@skienbrannkonsult.no

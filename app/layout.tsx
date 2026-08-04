@@ -51,7 +51,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Skien',
-  telephone: '+47 000 00 000',
+  telephone: '+47 972 93 977',
   email: 'post@skienbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',

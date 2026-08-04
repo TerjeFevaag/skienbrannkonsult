@@ -8,7 +8,7 @@ import { socialMetadata } from '@/lib/seo'
 
 const title = 'Kontakt Brannkonsult AS | Få uforpliktende tilbud'
 const description =
-  'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Skien. Vi svarer innen 24 timer. Ring +47 000 00 000.'
+  'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Skien. Vi svarer innen 24 timer. Ring +47 972 93 977.'
 
 export const metadata: Metadata = {
   title,
@@ -60,7 +60,7 @@ export default function KontaktOssPage() {
                 <h3 className="font-bold text-brand-black text-lg mb-6">Kontaktinformasjon</h3>
                 <div className="space-y-5">
                   {[
-                    { icon: Phone, label: 'Telefon', value: '+47 000 00 000', href: 'tel:+4700000000' },
+                    { icon: Phone, label: 'Telefon', value: '+47 972 93 977', href: 'tel:+4797293977' },
                     { icon: Mail, label: 'E-post', value: 'post@skienbrannkonsult.no', href: 'mailto:post@skienbrannkonsult.no' },
                     { icon: MapPin, label: 'Adresse', value: '[Gateadresse], Skien', href: null },
                     { icon: Clock, label: 'Åpningstider', value: 'Man–Fre 08:00–16:00', href: null },

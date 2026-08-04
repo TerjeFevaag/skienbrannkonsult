@@ -177,8 +177,8 @@ export default function UavhengigKontrollPage() {
                     Kontakt oss
                   </Link>
                   <div className="space-y-3 pt-4 border-t border-brand-white/10">
-                    <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
-                      <Phone size={14} /> +47 000 00 000
+                    <a href="tel:+4797293977" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
+                      <Phone size={14} /> +47 972 93 977
                     </a>
                     <a href="mailto:post@skienbrannkonsult.no" className="flex items-center gap-2 text-brand-white/60 hover:text-brand-orange transition-colors text-sm">
                       <Mail size={14} /> post@skienbrannkonsult.no
